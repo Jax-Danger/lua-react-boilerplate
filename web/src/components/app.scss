@@ -1,0 +1,46 @@
+/* app.scss */
+.background {
+	position: absolute;
+	background-color: #6b7280;
+	width: 52%;
+	height: 52%;
+	left: 26%;
+	top: 23%;
+	border: 4px solid black;
+	user-select: none;
+
+	.title {
+		position: absolute;
+		top: 2;
+		left: 28.84%;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.sub-title {
+		position: absolute;
+		top: 40px; /* Adjusted to ensure it doesn't overlap with .title */
+		left: 35.45%;
+		font-size: 22px;
+	}
+
+	.body {
+		position: absolute;
+		top: 20%; /* Adjusted to ensure it doesn't overlap with .sub-title */
+		left: 35%;
+		font-size: 16px;
+		text-align: left;
+	}
+
+	.close {
+		position: absolute;
+		bottom: 3%;
+		left: 422px;
+		background-color: #2563eb;
+		color: white;
+		padding: 10px 60px;
+		border: 2px solid rgba(99, 99, 99, 0.662);
+		z-index: 10; /* Bring the button to the front */
+		cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+	}
+}

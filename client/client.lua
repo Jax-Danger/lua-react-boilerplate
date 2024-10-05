@@ -6,9 +6,9 @@ print("Max Players: " .. cfg.MaxPlayers)
 
 -- Example code to send config to UI
 
-RegisterCommand("serverinfo", function()
+RegisterCommand("getserverinfo", function()
   toggleNuiFrame(true)
-  debugPrint("Showing NUI frame")
+  debugPrint("Showing Inventory")
 end)
 
 

@@ -9,14 +9,13 @@ shared_scripts {
   "cfg/cfg.lua",
   "@ox_lib/init.lua" -- uncomment if you are using ox_lib
 }
-server_script {
-  "server/server.lua",
+server_scripts {
+  "server/*.lua",
   "@oxmysql/lib/MySQL.lua"
 }
 
-client_script {
-  "client/client.lua",
-  "client/utils.lua"
+client_scripts {
+  "client/*.lua"
 }
 
 files {
