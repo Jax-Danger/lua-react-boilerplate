@@ -6,6 +6,9 @@ const App: React.FC = () => {
 	const [servername, setServerName] = useState<string>("Test Server");
 	const [startingMoney, setStartingMoney] = useState<number>(1000);
 	const [pvp, setPvp] = useState<string>("disabled");
+	const [imageUrl, setImageUrl] = useState(
+		"https://r2.fivemanage.com/pub/earoojlnb06p.png"
+	);
 
 	useEffect(() => {
 		fetchNui("getServerInfo").then((data: any) => {
@@ -14,6 +17,10 @@ const App: React.FC = () => {
 			setPvp(data.EnablePvP);
 		});
 	}, []);
+
+	const handleInputChange = (event: any) => {
+		setImageUrl(event.target.value);
+	};
 
 	return (
 		<>
@@ -30,6 +37,21 @@ const App: React.FC = () => {
 					<p>Welcome to {servername}</p>
 					<p>Your Starting money is ${startingMoney}</p>
 					<p>PVP is currently {pvp}</p>
+				</div>
+
+					<img
+						src={imageUrl}
+						alt="Image from URL will be displayed here."
+						className="w-[25%] h-[25%] border-0 absolute left-[38%] top-[40%] cursor-default"
+					/>
+				<div>
+					<input
+						type="text"
+						value={imageUrl}
+						onChange={handleInputChange}
+						placeholder="Enter image URL"
+						className="absolute left-[35%] top-[70%] w-[30%] h-[5%] border-[2px] border-black"
+					/>
 				</div>
 
 				{/* Close UI Button */}
