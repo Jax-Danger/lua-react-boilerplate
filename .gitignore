@@ -1,2 +1,5 @@
 .idea
 /web/node_modules
+/web
+
+/reactjs/node_modules

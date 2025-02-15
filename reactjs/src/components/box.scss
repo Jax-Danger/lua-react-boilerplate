@@ -1,0 +1,40 @@
+// The .container class is used to center its child elements both horizontally and vertically
+.container {
+	display: flex; // Enables flexbox layout
+	justify-content: center; // Centers child elements horizontally
+	align-items: center; // Centers child elements vertically
+	height: 100vh; // Sets the height to 100% of the viewport height
+
+	// The .box class styles the main box element
+	.box {
+		width: 750px; // Sets the width of the box
+		height: 500px; // Sets the height of the box
+		background-color: darkslategray; // Sets the background color of the box
+		border: 2px solid black; // Adds a black border around the box
+		border-radius: 10px; // Rounds the corners of the box
+		display: flex; // Enables flexbox layout for the box
+		align-items: center; // Centers child elements vertically within the box
+		justify-content: center; // Centers child elements horizontally within the box
+		color: white; // Sets the text color to white
+		font-size: 20px; // Sets the font size of the text
+		text-align: center; // Centers the text inside the box
+		position: relative; // Allows positioning of child elements relative to the box
+		flex-direction: column; // Stacks child elements vertically
+
+		// The .close class styles the close button inside the box
+		.close {
+			margin-top: auto; // Pushes the button to the bottom of the box
+			margin-bottom: 5px; // Adds some space from the bottom edge
+			width: 70px;
+			height: 30px;
+			background-color: rgb(31, 41, 36);
+			border: 2px solid black;
+			border-radius: 10px;
+			display: flex; // Enables flexbox layout for the button
+			align-items: center; // Centers the text vertically within the button
+			justify-content: center; // Centers the text horizontally within the button
+			color: white;
+			font-size: 20px;
+		}
+	}
+}

@@ -7,9 +7,9 @@ function SendReactMessage(action, data)
   SendNUIMessage({action = action, data = data})
 end
 
-RegisterNUICallback("close", function(_, cb)
+RegisterNUICallback("closeBox", function(_, cb)
+	print('closeBox called.')
   toggleNuiFrame(false)
-  debugPrint("Hide NUI frame")
   cb({})
 end)
 
